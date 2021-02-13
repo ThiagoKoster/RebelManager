@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.API", "RebelManager.API\RebelManager.API.csproj", "{DD2F2166-FCE2-4641-B178-DF49659A496C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Domain", "RebelManager.Domain\RebelManager.Domain.csproj", "{669B5B97-4A21-44BA-901A-72741C8698DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Infrastructure", "RebelManager.Infrastructure\RebelManager.Infrastructure.csproj", "{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{30C2A2EC-16AA-42B9-BF24-E3865881711F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Application", "RebelManager.Application\RebelManager.Application.csproj", "{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebelManager.Application.Tests", "RebelManager.Application.Tests\RebelManager.Application.Tests.csproj", "{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD2F2166-FCE2-4641-B178-DF49659A496C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2F2166-FCE2-4641-B178-DF49659A496C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2F2166-FCE2-4641-B178-DF49659A496C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2F2166-FCE2-4641-B178-DF49659A496C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669B5B97-4A21-44BA-901A-72741C8698DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669B5B97-4A21-44BA-901A-72741C8698DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669B5B97-4A21-44BA-901A-72741C8698DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669B5B97-4A21-44BA-901A-72741C8698DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD2F2166-FCE2-4641-B178-DF49659A496C} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
+		{669B5B97-4A21-44BA-901A-72741C8698DB} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
+		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
+		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
+		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68} = {30C2A2EC-16AA-42B9-BF24-E3865881711F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1CBC888-2766-4BC0-964F-8F4BD91BFF04}
+	EndGlobalSection
+EndGlobal
