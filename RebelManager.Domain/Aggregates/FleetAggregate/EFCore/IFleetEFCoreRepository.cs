@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RebelManager.Domain.Aggregates.FleetAggregate
+namespace RebelManager.Domain.Aggregates.FleetAggregate.EFCore
 {
-    public interface IFleetRepository
+    public interface IFleetEFCoreRepository
     {
         Task<List<Fleet>> GetAll();
         Task<Fleet> AddAsync(Fleet fleet);

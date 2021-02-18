@@ -1,8 +1,5 @@
 ﻿using MediatR;
-using RebelManager.Domain.Aggregates.FleetAggregate;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RebelManager.Domain.Aggregates.FleetAggregate.EFCore;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,9 +13,9 @@ namespace RebelManager.Application.Seed
     public class SeedDbCommandHandler : IRequestHandler<SeedDbCommand, Unit>
     {
 
-        private readonly IFleetRepository _fleetRepository;
+        private readonly IFleetEFCoreRepository _fleetRepository;
 
-        public SeedDbCommandHandler(IFleetRepository fleetRepository)
+        public SeedDbCommandHandler(IFleetEFCoreRepository fleetRepository)
         {
             _fleetRepository = fleetRepository;
         }

@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{30C2A2EC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Application", "RebelManager.Application\RebelManager.Application.csproj", "{9B5C27FF-1874-4A23-8C1F-4E610389BEA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebelManager.Application.Tests", "RebelManager.Application.Tests\RebelManager.Application.Tests.csproj", "{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Application.Tests", "RebelManager.Application.Tests\RebelManager.Application.Tests.csproj", "{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

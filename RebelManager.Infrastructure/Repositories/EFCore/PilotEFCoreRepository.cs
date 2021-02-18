@@ -1,0 +1,24 @@
+﻿using Microsoft.EntityFrameworkCore;
+using RebelManager.Domain.Aggregates.FleetAggregate;
+using RebelManager.Domain.Aggregates.FleetAggregate.EFCore;
+using System.Threading.Tasks;
+
+namespace RebelManager.Infrastructure.Repositories.EFCore
+{
+    public class PilotEFCoreRepository : IPilotEFCoreRepository
+    {
+        private readonly string _connectionString;
+        public PilotEFCoreRepository(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
+        public async Task<Pilot> GetAsync(long id)
+        {
+            using(var dbContext = new RebelManagerDbContext(new DbContextOptionsBuilder().UseSqlServer(_connectionString).Options))
+            {
+                return await dbContext.Pilot.FindAsync(id);
+            }
+        }
+    }
+}

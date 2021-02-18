@@ -1,6 +1,7 @@
 ﻿using Mapster;
 using MediatR;
 using RebelManager.Domain.Aggregates.FleetAggregate;
+using RebelManager.Domain.Aggregates.FleetAggregate.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,9 +17,9 @@ namespace RebelManager.Application.Fleets.Commands
 
     public class CreateFleetCommandHandler : IRequestHandler<CreateFleetCommand, Fleet>
     {
-        private readonly IFleetRepository _fleetRepository;
+        private readonly IFleetEFCoreRepository _fleetRepository;
 
-        public CreateFleetCommandHandler(IFleetRepository fleetRepository)
+        public CreateFleetCommandHandler(IFleetEFCoreRepository fleetRepository)
         {
             _fleetRepository = fleetRepository;
         }
