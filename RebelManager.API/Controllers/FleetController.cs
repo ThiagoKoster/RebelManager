@@ -5,6 +5,7 @@ using RebelManager.API.Dto;
 using RebelManager.Application.Fleets.Commands;
 using RebelManager.Application.Fleets.Queries.Dapper;
 using RebelManager.Application.Fleets.Queries.EFCore;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace RebelManager.API.Controllers
@@ -22,8 +23,12 @@ namespace RebelManager.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetFleets()
         {
+            var watch = new Stopwatch();
             var query = new GetAllFleetsEFCoreQuery();
+
+            watch.Start();
             var result = await _mediator.Send(query);
+            watch.Stop();
             return Ok();
         }
 
@@ -36,7 +41,7 @@ namespace RebelManager.API.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("efcore/{id}")]
         public async Task<IActionResult> GetFleet(long id)
         {
             var query = new GetFleetEFCoreQuery(id);

@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Application", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebelManager.Application.Tests", "RebelManager.Application.Tests\RebelManager.Application.Tests.csproj", "{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{8020BB59-6E5D-47C6-9C43-0805D6FEBF4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebelManager.Infrastructure.Benchmark", "RebelManager.Infrastructure.Benchmark\RebelManager.Infrastructure.Benchmark.csproj", "{FC4E292B-F5F0-4573-AB0B-C91041421B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC4E292B-F5F0-4573-AB0B-C91041421B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4E292B-F5F0-4573-AB0B-C91041421B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4E292B-F5F0-4573-AB0B-C91041421B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4E292B-F5F0-4573-AB0B-C91041421B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{21CCA1DB-0208-4DAC-A40B-2A77D70ABE98} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
 		{9B5C27FF-1874-4A23-8C1F-4E610389BEA2} = {3D35991B-0440-4D7D-B3DB-5D2B6CB17E45}
 		{9309721F-6A12-4ED3-9F1D-F6F0DB2E2C68} = {30C2A2EC-16AA-42B9-BF24-E3865881711F}
+		{FC4E292B-F5F0-4573-AB0B-C91041421B7C} = {8020BB59-6E5D-47C6-9C43-0805D6FEBF4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1CBC888-2766-4BC0-964F-8F4BD91BFF04}
