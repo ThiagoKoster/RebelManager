@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 
 namespace RebelManager.API.Controllers
 {
-    [Route("[controller]")]
-    public class FleetController : ControllerBase
+    [ApiController]
+    [ApiVersion("1.0", Deprecated = true)]
+    [Route("fleet")]
+    public class FleetV1Controller : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public FleetController(IMediator mediator)
+        public FleetV1Controller(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -26,14 +28,6 @@ namespace RebelManager.API.Controllers
 
             return Ok(await _mediator.Send(query));
         }
-
-        [HttpGet("dapper")]
-        public async Task<IActionResult> GetFleetsDapper()
-        {
-            var query = new GetAllFleetsDapperQuery();
-            return Ok(await _mediator.Send(query));
-        }
-
 
         [HttpGet("efcore/{id}")]
         public async Task<IActionResult> GetFleet(long id)
@@ -49,6 +43,25 @@ namespace RebelManager.API.Controllers
             var result = await _mediator.Send(command);
 
             return CreatedAtAction("GetFleet",new { id = result.Id }, result);
+        }
+    }
+
+    [ApiController]
+    [ApiVersion("2.0")]
+    [Route("fleet")]
+    public class FleetV2Controller : ControllerBase
+    {
+        private readonly IMediator _mediator;
+        public FleetV2Controller(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetFleetsDapper()
+        {
+            var query = new GetAllFleetsDapperQuery();
+            return Ok(await _mediator.Send(query));
         }
     }
 }
