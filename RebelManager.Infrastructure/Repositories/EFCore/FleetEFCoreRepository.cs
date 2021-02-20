@@ -42,15 +42,32 @@ namespace RebelManager.Infrastructure.Repositories
         {
             using (var _rebelManagerDbContext = new RebelManagerDbContext(new DbContextOptionsBuilder().UseSqlServer(_connectionString).Options))
             {
+                return await _rebelManagerDbContext.Fleet.Include(f => f.Ships).ThenInclude(s => s.Pilots).ToListAsync();
+            }
+        }
+
+        public async Task<List<Fleet>> GetAllAsNoTracking()
+        {
+            using (var _rebelManagerDbContext = new RebelManagerDbContext(new DbContextOptionsBuilder().UseSqlServer(_connectionString).Options))
+            {
                 return await _rebelManagerDbContext.Fleet.Include(f => f.Ships).ThenInclude(s => s.Pilots).AsNoTracking().ToListAsync();
             }
         }
+
+        public async Task<List<Fleet>> GetAllAsNoTrackingWithIdentityResolution()
+        {
+            using (var _rebelManagerDbContext = new RebelManagerDbContext(new DbContextOptionsBuilder().UseSqlServer(_connectionString).Options))
+            {
+                return await _rebelManagerDbContext.Fleet.Include(f => f.Ships).ThenInclude(s => s.Pilots).AsNoTrackingWithIdentityResolution().ToListAsync();
+            }
+        }
+
 
         public async Task<Fleet> GetByIdAsync(long id)
         {
             using (var _rebelManagerDbContext = new RebelManagerDbContext(new DbContextOptionsBuilder().UseSqlServer(_connectionString).Options))
             {
-                return await _rebelManagerDbContext.Fleet.FindAsync(id);
+                return await _rebelManagerDbContext.Fleet.Include(f => f.Ships).AsNoTracking().FirstAsync(f => f.Id == id);
             }
         }
     }

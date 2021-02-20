@@ -23,20 +23,19 @@ namespace RebelManager.API.Controllers
         public async Task<IActionResult> GetFleets()
         {
             var query = new GetAllFleetsEFCoreQuery();
-            var result = await _mediator.Send(query);
-            return Ok();
+
+            return Ok(await _mediator.Send(query));
         }
 
         [HttpGet("dapper")]
         public async Task<IActionResult> GetFleetsDapper()
         {
             var query = new GetAllFleetsDapperQuery();
-            var result = await _mediator.Send(query);
-            return Ok();
+            return Ok(await _mediator.Send(query));
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("efcore/{id}")]
         public async Task<IActionResult> GetFleet(long id)
         {
             var query = new GetFleetEFCoreQuery(id);
