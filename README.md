@@ -8,7 +8,7 @@
 > Dotnet sandbox project to study backend technologies
 
 
-## <a name="features"> Features
+## <a name="features"></a> Features
 * Dapper
 * EFCore
 * Benchmarkdotnet for Dapper x EFCore comparison
@@ -16,10 +16,10 @@
 * Bogus for creating mock data
 * Mediator pattern
 
-## <a name="results"> Results
+## <a name="results"></a> Results
 Results were obtained using Benchmarkdotnet, GetAllFleets return all fleets with ships and pilots. GetPilot return only the pilot <br/>
 
-![GetPilot](https://github.com/ThiagoKoster/RebelManager/images/GetPilot.png)
+![GetPilot](images/GetPilot.png)
   
 >BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042<br/>
 Intel Core i7-7500U CPU 2.70GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cores<br/>
@@ -40,7 +40,7 @@ AsNoTrackingWithIdentityResolution | 504.1 μs | 24.46 μs | 72.11 μs	| 539.3 �
 
 
 ### GetAllFleet Benchmark
-![GetAllFleet](https://github.com/ThiagoKoster/RebelManager/images/GetAllFleet.png)
+![GetAllFleet](images/GetAllFleet.png)
 
 >BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042<br/>
 Intel Core i7-7500U CPU 2.70GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cores<br/>
